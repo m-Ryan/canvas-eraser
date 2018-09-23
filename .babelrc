@@ -1,0 +1,10 @@
+{
+    "presets": [ "react", "env", "stage-2"],
+    "plugins": [
+      "transform-decorators-legacy",
+      "lodash",
+      ["import", 
+        { "libraryName": "antd-mobile", "style": "css" }
+      ] 
+    ]
+  }

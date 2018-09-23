@@ -1,0 +1,168 @@
+.container {
+    height: 100vh;
+    width: 100vw;
+    background: #fffdef;
+    position: relative;
+    padding-bottom: 975px; //去除子元素绝对定位的高度
+    header {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 20px;
+        padding-top: 10px;
+        img {
+            width: 98px;
+            height: 42px;
+        }
+    }
+    section {
+        height: 775px;
+        width: 100%;
+        background: url('../../static/images/girl.png') no-repeat;
+        background-size: 100% 100%;
+        position: absolute;
+        bottom: 200px;
+        /* 去除底部*/
+    }
+    footer {
+        height: 200px;
+        width: 100%;
+        background: url('../../static/images/toolbar.png') no-repeat;
+        background-size: 100% 100%;
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        .selectd {
+            border: 3px solid #ffffff;
+        }
+        .drag {
+            background: #e9bf9f !important;
+        }
+
+        div {
+            height: 140px;
+            width: 140px;
+            border-radius: 12px;
+            margin-left: 156.667px;
+            background: #e9bf9f;
+            &:active{
+                @extend .selectd;
+            }
+            
+            span{
+                display: block;
+                height: 140px;
+                width: 140px;
+                z-index: 99999999;
+                
+            }
+            .btn1{
+                background: url('../../static/images/btn1.png');
+                background-size: 100% 100%;
+             }
+             .btn2{
+                background: url('../../static/images/btn2.png');
+                background-size: 100% 100%;
+             }
+        }
+        
+    }
+    .popup {
+        width: 554px;
+        height: 215px;
+        position: absolute;
+        top: 10%;
+        left: 78px;
+        opacity: 0;
+        background: url('../../static/images/popup1.png') no-repeat;
+        background-size: 100% 100%;
+        z-index: 999999;
+
+    }
+    .popup2 {
+        width: 460px;
+        height: 70px;
+        position: absolute;
+        bottom: 175px;
+        left: 245px;
+        background: url('../../static/images/popup2.png') no-repeat;
+        background-size: 100% 100%;
+        z-index: 999999;
+
+    }
+    canvas {
+        position: absolute;
+        left: 0;
+        zoom:0.5;
+        z-index: 9999;
+        bottom: 200px;
+        /* 去除底部*/
+    }
+
+}
+.fade {
+    animation: animate-fade 1s 1s ease-in forwards;
+}
+.scale {
+    animation: animate-scale 1s linear infinite;
+}
+.jump{
+    animation: animate-jump 1s linear infinite;
+}
+.move{
+    animation: animate-move 4s linear;
+}
+@keyframes animate-fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes animate-scale {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes animate-jump {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes animate-move {
+    0% {
+        transform: translateX(0px);
+    }
+    20% {
+        transform: translateX(-280px) rotate(0);
+    }
+    40% {
+        transform: translateX(-280px) rotate(-40deg);
+    }
+    50%{
+        transform: translateX(-280px) rotate(0);
+    }
+    60% {
+        transform: translateX(-280px) rotate(-40deg);
+    }
+    80%{
+        transform: translateX(-280px) rotate(0);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
