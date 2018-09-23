@@ -2,7 +2,7 @@
 # canvas 橡皮擦效果
 ---
 ** 效果图 ** 
-![效果展示图](https://www.maocanhua.cn/images/upload/153767988119261.gif)
+![效果展示图](./public/static/images/153767988119261.gif)
 
 ---
 
